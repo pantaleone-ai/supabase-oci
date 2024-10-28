@@ -31,7 +31,7 @@ Change these as well as the default secrets:
 Username: supabase
 Password: this_password_is_insecure_and_should_be_updated
 ```
-#Nginx Setup
+# Nginx Setup
 
 ```
 cd /etc/nginx/sites-available/
@@ -53,13 +53,13 @@ server {
     }
 }
 ```
-#Link and Test Nginx Configs
+# Link and Test Nginx Configs
 ```
 sudo ln -s /etc/nginx/sites-available/n8n.conf /etc/nginx/sites-enabled/
 sudo nginx -t
 ```
 
-#Apply all changes
+# Apply all changes
 ```
 # Stop and remove the containers
 docker compose down
