@@ -24,10 +24,13 @@ docker compose up -d
 docker compose ps
 ```
 
-# Change defaults!
+# Change default username and password editing .env within your Docker directory!!
+
+Change these as well as the default secrets:
+```
 Username: supabase
 Password: this_password_is_insecure_and_should_be_updated
-
+```
 #Nginx Setup
 
 ```
@@ -50,8 +53,19 @@ server {
     }
 }
 ```
+#Link and Test Nginx Configs
 ```
 sudo ln -s /etc/nginx/sites-available/n8n.conf /etc/nginx/sites-enabled/
 sudo nginx -t
 ```
+
+#Apply all changes
+```
+# Stop and remove the containers
+docker compose down
+
+# Recreate and start the containers
+docker compose up -d
+```
+
 
